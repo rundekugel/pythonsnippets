@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+"""globals variables demo"""
+
 import globalsContainer
 import modul2
 
