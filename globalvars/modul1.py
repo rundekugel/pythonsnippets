@@ -18,6 +18,8 @@ def f2():
   gc.myglobals.varC1 =122
 
 def main():
+  print("Verify the address of the class myglobals, because it's used as static class, \
+       all the modules access the same variables address.)")
   print("m1:", globalsContainer.myglobals.varCHallo, globalsContainer.myglobals, modul2.globalsContainer.myglobals )
   print("m1.m:",globalsContainer.varA1, globalsContainer.myglobals.varC1)
   f1()
