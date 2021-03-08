@@ -7,6 +7,7 @@ import modul2
 def f1():
   gc = globalsContainer
   print("m1.f1:",gc.varA1, gc.myglobals.varC1)
+  print("m1.f1 change values")
   gc.varA1 = 111
   gc.myglobals.varC1 =112
   
@@ -14,6 +15,7 @@ def f1():
 def f2():
   gc = globalsContainer
   print("m1.f2:",gc.varA1, gc.myglobals.varC1)
+  print("m1.f2 change values")
   gc.varA1 = 121
   gc.myglobals.varC1 =122
 
@@ -35,7 +37,9 @@ def main():
   modul2.main()
   print("m1.m:",globalsContainer.varA1, globalsContainer.myglobals.varC1)
   globalsContainer.varA1, globalsContainer.myglobals.varC1 = 91,92
+  print("m1.m change values")
   modul2.main()
   print("m1.m:",globalsContainer.varA1, globalsContainer.myglobals.varC1)
   
 main()
+input()

@@ -6,6 +6,7 @@ import globalsContainer
 def f1():
   gc = globalsContainer
   print("m2.f1:",gc.varA1, gc.myglobals.varC1)
+  print("m2.f1 change values")
   gc.varA1 = 711
   gc.myglobals.varC1 =712
   
@@ -13,6 +14,7 @@ def f1():
 def f2():
   gc = globalsContainer
   print("m2.f2:",gc.varA1, gc.myglobals.varC1,globalsContainer.myglobals)
+  print("m2.f2 change values")
   gc.varA1 = 721
   gc.myglobals.varC1 =722
 
