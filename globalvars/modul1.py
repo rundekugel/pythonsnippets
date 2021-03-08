@@ -27,7 +27,8 @@ def main():
        all the modules access the same variables address.)")
   print("m1:", globalsContainer.myglobals.varCHallo, globalsContainer.myglobals, modul2.globalsContainer.myglobals )
   gcInstance = globalsContainer.myglobals() # create an instance
-  globalsContainerSimple.testvar = "init"
+  globalsContainerSimple.testvar = "init m1"
+  globalsContainerSimple.varFromM1 = "init1"
   print("m1.m:",globalsContainer.varA1, globalsContainer.myglobals.varC1, globalsContainerSimple.testvar)
   gcInstance.varA1 = 0.1
   gcInstance.varC1 = 0.2
@@ -49,6 +50,6 @@ def main():
   modul2.main()
   print("m1.m:",globalsContainer.varA1, globalsContainer.myglobals.varC1, globalsContainerSimple.testvar)
   print("m1.m value of instance: ", gcInstance.varC1)
-  
+  print("from m1 globalsContainerSimple dir: ", modul2.returnNoS(dir(globalsContainerSimple)))
 main()
 

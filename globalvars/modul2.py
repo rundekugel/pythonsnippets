@@ -21,11 +21,24 @@ def f2():
   gc.myglobals.varC1 =722
   globalsContainerSimple.f2="hi"
   globalsContainerSimple.testvar=2.2
+  
+def returnNoS(mylist)  :
+  r=[]
+  for i in mylist:
+    try:
+      if i[0] == "_":
+        continue
+    except:
+      pass
+    r.append(i)
+  return r
 
 def main():
+  globalsContainerSimple.varFromM2 = "init2"
   print("m2.m:",globalsContainer.varA1, globalsContainer.myglobals.varC1, globalsContainerSimple.testvar)
   f1()
   print("m2.m:",globalsContainer.varA1, globalsContainer.myglobals.varC1)
   f2()
   print("m2.m:",globalsContainer.varA1, globalsContainer.myglobals.varC1,globalsContainer.myglobals, globalsContainerSimple.testvar)
+  print("from m2 globalsContainerSimple dir: ",returnNoS(dir(globalsContainerSimple)))
   
